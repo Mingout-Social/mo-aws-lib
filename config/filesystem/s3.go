@@ -1,8 +1,8 @@
 package filesystem
 
 import (
+	"github.com/Mingout-Social/mo-aws-lib/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"mo-aws-lib/config"
 )
 
 var S3Client *s3.Client

@@ -1,4 +1,4 @@
-module mo-aws-lib
+module github.com/Mingout-Social/mo-aws-lib
 
 go 1.19
 

@@ -2,12 +2,12 @@ package lib
 
 import (
 	"context"
+	"github.com/Mingout-Social/mo-aws-lib/config/filesystem"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/feature/s3/manager"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
 	"io"
-	"mo-aws-lib/config/filesystem"
 	"os"
 )
 
