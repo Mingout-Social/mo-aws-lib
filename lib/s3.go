@@ -24,3 +24,19 @@ func PutFile(path string, file io.Reader, fileSize int64, access types.ObjectCan
 
 	return result, err
 }
+
+func CopyFile(sourceBucket string, sourceKey string, destinationBucket string, destinationKey string) error {
+	client := filesystem.S3Client
+	copySource := sourceBucket + "/" + sourceKey
+
+	input := s3.CopyObjectInput{
+		Bucket:     &destinationBucket,
+		CopySource: &copySource,
+		Key:        &destinationKey,
+		ACL:        types.ObjectCannedACLPublicRead,
+	}
+
+	_, err := client.CopyObject(context.TODO(), &input)
+
+	return err
+}
